@@ -115,5 +115,14 @@ inoremap <silent> jj <ESC>
 "<esc> を jj に直す
 inoremap <silent> ｊｊ <ESC>
 
+".texを開いたとき、テンプレファイルを読み込む
 autocmd BufNewFile *.tex 0r C:\Users\溝 大貴\.vim\template/tex.txt
 
+"<ctrl> + n をしなくても自動補完
+set completeopt=menuone
+for k in split("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",'\zs')
+  exec "imap " . k . " " . k . "<C-N><C-P>"
+endfor
+imap <expr> <TAB> pumvisible() ? "\<Down>" : "\<Tab>"
+
+add-vim-temp
