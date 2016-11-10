@@ -1,4 +1,4 @@
-"NeoBundle 設定。
+"NeoBundle 設定
 "プラグインを追加する時はC:\Users\溝 大貴\.vim\bundleに主導でgit cloneしてね
  if 0 | endif
 
